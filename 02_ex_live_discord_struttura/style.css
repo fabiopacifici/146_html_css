@@ -76,6 +76,17 @@
   box-sizing: border-box;
 }
 
+
+body
+{
+  min-width: 1200px;
+}
+
+img
+{
+  max-width: 100%;
+}
+
 /* Utilities */
 .container
 {
