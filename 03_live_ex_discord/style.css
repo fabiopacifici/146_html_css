@@ -66,6 +66,12 @@
 :root
 {
   --dis-bg-primary: #3161e0;
+  --dis-bg-primary-light: #7289da;
+  --dis-bg-primary-lighter: #8ea1e1;
+  --dis-bg-dark: #23272a;
+  --dis-bg-ligher: #ffffff;
+  --dis-bg-light: #f6f6f6;
+
 }
 
 
@@ -76,7 +82,25 @@
   box-sizing: border-box;
 }
 
+
+body
+{
+  font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+section
+{
+  padding: 1rem 0
+}
+
+img
+{
+  max-width: 100%;
+}
+
 /* Utilities */
+
+/* layout */
 .container
 {
   max-width: 1200px;
@@ -86,7 +110,7 @@
 
 .container-sm
 {
-  max-width: 900px;
+  max-width: 700px;
   width: 65%;
   margin: 0 auto;
 }
@@ -107,10 +131,64 @@
   width: 40%;
 }
 
-section
+/* buttons */
+.btn
 {
-  padding: 1rem 0
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
 }
+
+.btn-light
+{
+  background-color: var(--dis-bg-light);
+  color: var(--dis-bg-dark);
+}
+
+.btn-dark
+{
+  background-color: var(--dis-bg-dark);
+  color: var(--dis-bg-ligher);
+}
+
+.btn-sm
+{
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.btn-lg
+{
+  padding: 1.25rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+}
+
+/* Spacings */
+
+.ml-6
+{
+  margin-left: 6rem;
+}
+
+.mr-6
+{
+  margin-right: 6rem;
+}
+
+
+/* Typography */
+.text-center
+{
+  text-align: center;
+}
+
+.text-end
+{
+  text-align: end;
+}
+
 
 /* #endregion Common   */
 
@@ -121,30 +199,53 @@ header
   padding: 1rem 0;
   background-color: var(--dis-bg-primary);
 
-  .logo,
-  .login
+
+  nav
   {
-    flex-grow: 1;
+    align-items: center;
+
+
+
+    .logo,
+    .actions
+    {
+      flex-grow: 1;
+    }
+
+    .logo__img
+    {
+      vertical-align: middle;
+    }
+
+    .actions
+    {
+      text-align: right;
+    }
+
+    .menu
+    {
+      flex-grow: 2;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+
+
+      a
+      {
+        text-decoration: none;
+        color: var(--dis-bg-ligher);
+      }
+
+    }
+
   }
 
-  .login
-  {
-    text-align: right;
-  }
 
-  .menu
-  {
-    flex-grow: 2;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
-  }
 
 
 }
 
 /* #endregion Header */
-
 
 
 /* #region Main */
@@ -154,11 +255,68 @@ main
 
   .jumbotron
   {
-    background-color: var(--dis-bg-primary);
+    background-image: url('./img/jumbo.png');
+    color: var(--dis-bg-ligher);
+    background-size: cover;
     padding: 2rem 0;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1
+    {
+      font-size: 3.5rem;
+      font-weight: 600;
+
+    }
+
+    p
+    {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      margin: 3rem 0;
+    }
+
+    .cta
+    {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+    }
+  }
+
+
+  section
+  {
+    padding: 6rem 0;
+
+    h2
+    {
+      font-size: 3rem;
+      margin: 2rem 0;
+    }
+
+    p
+    {
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  .video_calls
+  {
+    .text>p
+    {
+      padding: 0 5rem;
+
+    }
   }
 
 }
+
 
 /* #endregion Main */
 

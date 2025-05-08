@@ -5,14 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- Fontawesome CDN -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'
+    integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=='
+    crossorigin='anonymous' referrerpolicy='no-referrer' />
+
+  <!-- My Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="debug">
+<body class="">
 
   <header id="app_header">
     <nav class="container d-flex">
-      <div class="logo">logo</div>
+      <div class="logo">
+        <img class="logo__img" src="./img/logo.svg" alt="">
+      </div>
 
       <ul class="menu d-flex">
         <li><a href="">Lorem.</a></li>
@@ -22,47 +30,105 @@
         <li><a href="">Quisquam!</a></li>
       </ul>
 
-      <div class="login">login</div>
+      <div class="actions">
+        <a href="#" class="btn btn-sm btn-light">Accedi</a>
+      </div>
     </nav>
   </header>
   <!-- /#app_header -->
   <main id="app_main">
 
     <div class="jumbotron">
-      <div class="container-sm"></div>
+      <div class="container-sm">
+        <h1>Il tuo posto per parlare</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus amet quos eum adipisci laborum nisi
+          incidunt corporis repellat vitae doloremque? Temporibus amet quos eum adipisci laborum nisi incidunt corporis
+        </p>
+
+        <div class="cta">
+          <a href="#" class="btn btn-lg btn-light">
+            <i class="fa-solid fa-down-long"></i> Scarica per Mac</a>
+          <a href="#" class="btn btn-lg btn-dark">
+            <i class="fa fa-download" aria-hidden="true"></i> Apri discord nel tuo browser
+          </a>
+
+        </div>
+
+      </div>
       <!-- /.container-sm -->
     </div>
     <!-- /.jumbotron -->
 
-
     <section class="invite_only">
       <div class="container d-flex">
-        <div class="col-60">img</div>
-        <div class="col-40">text</div>
+        <div class="col-60">
+          <img src="./img/item1.svg" alt="">
+        </div>
+        <div class="col-40">
+          <div class="ml-6">
+            <h2>Un luogo a invito con tutto lo spazio necessario per parlare</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit ipsam, odit suscipit consequuntur
+              et.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- /.invite_only -->
 
     <section class="community">
       <div class="container d-flex">
-        <div class="col-40">text</div>
-        <div class="col-60">img</div>
+        <div class="col-40">
+          <div class="ml-6">
+            <h2>Un luogo a invito con tutto lo spazio necessario per parlare</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit ipsam, odit suscipit consequuntur
+              et.
+            </p>
+          </div>
+        </div>
+        <div class="col-60 text-end">
+          <img src="./img/item2.svg" alt="">
+        </div>
       </div>
     </section>
     <!-- /.community -->
 
     <section class="fandom">
       <div class="container d-flex">
-        <div class="col-60">img</div>
-        <div class="col-40">text</div>
+        <div class="col-60">
+          <img src="./img/item3.svg" alt="">
+        </div>
+        <div class="col-40">
+          <div class="ml-6">
+            <h2>Un luogo a invito con tutto lo spazio necessario per parlare</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque velit ipsam, odit suscipit consequuntur
+              et.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- /.fandom -->
 
-    <section class="video-calls">
-      <div class="container"></div>
+    <section class="video_calls text-center">
+      <div class="container">
+
+        <div class="text">
+          <h2>Tecnologia affidabile per tenersi in contatto</h2>
+          <p>
+            Video a audio a bassa Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quia voluptatum eveniet
+            inventore omnis dicta animi tenetur ipsum impedit minima?
+          </p>
+        </div>
+
+        <img src="./img/item4-big.svg" alt="">
+      </div>
     </section>
-    <!-- /.video-calls -->
+    <!-- /.video_calls -->
 
 
   </main>
