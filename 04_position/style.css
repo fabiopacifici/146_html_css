@@ -1,0 +1,20 @@
+.square
+{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+
+}
+
+.pink
+{
+  background-color: pink;
+}
+
+.blue
+{
+  background-color: blue;
+  position: relative;
+  bottom: 5px;
+  left: 250px;
+}
