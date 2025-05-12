@@ -2,10 +2,47 @@
 
 .debug
 {
+  *
+  {
+    border: 1px dashed red;
+  }
+
   [class^="col"]
   {
     border: 1px dashed #000;
   }
+
+
+
+  #hero,
+  #partners,
+  #operations
+  {
+    [class^="col"]
+    {
+      min-height: 300px;
+    }
+  }
+
+  #plans
+  {
+    padding: 3rem 0;
+
+    .col-4
+    {
+      min-height: 500px;
+    }
+
+    .col-12
+    {
+      min-height: 300px;
+    }
+
+
+  }
+
+
+
 }
 
 
@@ -44,6 +81,7 @@
 {
   width: auto;
   flex-basis: auto;
+  flex-grow: 1;
 }
 
 .col-1
@@ -104,4 +142,81 @@
 .col-12
 {
   width: 100%;
+}
+
+
+
+#app_header
+{
+  padding: 1rem;
+
+  nav
+  {
+    display: flex;
+
+    .left,
+    .right
+    {
+      display: flex;
+      flex-grow: 1;
+    }
+
+
+    .list-unstyled
+    {
+      list-style: none;
+      display: flex;
+      flex-grow: 1;
+
+      a
+      {
+        padding: .75rem 1rem
+      }
+    }
+
+
+  }
+
+  ;
+}
+
+
+#hero
+{
+  h1
+  {
+    padding: 4rem 0;
+    font-size: 3.5rem;
+  }
+
+
+}
+
+#plans
+{
+
+  .card
+  {
+    height: 100%;
+    border: 1px solid #ccc;
+  }
+}
+
+#plans,
+#operations,
+#teams
+{
+  h2
+  {
+    padding: 2rem 0;
+  }
+
+}
+
+footer
+{
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
 }
