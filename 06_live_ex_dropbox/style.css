@@ -59,6 +59,7 @@ body
 {
   font-family: sans-serif;
   background-color: #ededed;
+  min-width: 1480px;
 }
 
 img
@@ -236,10 +237,29 @@ img
 /* #region main */
 #hero
 {
+  background-color: aqua;
+  height: 580px;
+
   h1
   {
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
     font-size: 3.5rem;
+    font-weight: 800;
+  }
+
+  p
+  {
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+
+  .cta
+  {
+    div
+    {
+      padding: 2rem 0;
+    }
   }
 
 
