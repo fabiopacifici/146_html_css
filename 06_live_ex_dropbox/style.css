@@ -55,7 +55,19 @@
   box-sizing: border-box;
 }
 
+body
+{
+  font-family: sans-serif;
+  background-color: #ededed;
+}
 
+img
+{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/*Layout*/
 .container
 {
   width: 80%;
@@ -144,21 +156,48 @@
   width: 100%;
 }
 
+/*buttons*/
+.btn
+{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-primary
+{
+  background-color: rgb(68, 68, 255);
+  color: white;
+
+  &:hover
+  {
+    background-color: rgb(116, 116, 255);
+    color: white;
+  }
 
 
+}
+
+
+
+/* #region header */
 #app_header
 {
-  padding: 1rem;
+  background-color: white;
+  padding: 0 1rem;
 
   nav
   {
     display: flex;
+    justify-content: space-between;
 
     .left,
     .right
     {
       display: flex;
-      flex-grow: 1;
+      align-items: center;
+
     }
 
 
@@ -170,7 +209,18 @@
 
       a
       {
-        padding: .75rem 1rem
+        color: black;
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+
+        &:hover
+        {
+          border-bottom: 2px solid #000;
+        }
+
+
       }
     }
 
@@ -180,7 +230,10 @@
   ;
 }
 
+/* #endregion header */
 
+
+/* #region main */
 #hero
 {
   h1
@@ -213,6 +266,10 @@
 
 }
 
+/* #endregion main */
+
+
+/* #region footer */
 footer
 {
   margin-top: 3rem;
