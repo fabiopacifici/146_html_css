@@ -55,8 +55,10 @@
   box-sizing: border-box;
 }
 
+html,
 body
 {
+  scroll-behavior: smooth;
   font-family: sans-serif;
   background-color: #ededed;
   min-width: 1480px;
@@ -75,6 +77,14 @@ img
   max-width: 1200px;
   margin: auto
 }
+
+.container-sm
+{
+  width: 70%;
+  max-width: 1024px;
+  margin: auto
+}
+
 
 .row
 {
@@ -228,7 +238,7 @@ img
 
   }
 
-  ;
+
 }
 
 /* #endregion header */
@@ -268,10 +278,84 @@ img
 #plans
 {
 
+
+
+  .col-4
+  {
+    .card-body
+    {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .col-12
+  {
+    .card-body
+    {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+
+
+
   .card
   {
     height: 100%;
     border: 1px solid #ccc;
+
+    .card-header
+    {
+      text-align: center;
+      padding: 0.75rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .card-body
+    {
+      padding: 1rem;
+      gap: 2rem;
+
+      h3
+      {
+        font-size: 1.5rem;
+      }
+
+
+
+
+      .features,
+      .checklist
+      {
+        list-style: none;
+        line-height: 2rem;
+
+        li
+        {
+          display: flex;
+          align-items: start;
+          gap: 0.5rem;
+        }
+
+      }
+
+
+      .cta
+      {
+        .btn
+        {
+          display: block;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      }
+
+
+
+    }
+
   }
 }
 
@@ -281,7 +365,9 @@ img
 {
   h2
   {
-    padding: 2rem 0;
+    margin: 4rem 0;
+    padding: 4rem 0;
+    font-size: 2rem;
   }
 
 }
