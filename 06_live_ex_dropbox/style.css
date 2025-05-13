@@ -186,10 +186,19 @@ img
     background-color: rgb(116, 116, 255);
     color: white;
   }
-
-
 }
 
+.btn-outline-dark
+{
+  border: 1px solid black;
+
+
+  &:hover
+  {
+    background-color: black;
+    color: white;
+  }
+}
 
 
 /* #region header */
