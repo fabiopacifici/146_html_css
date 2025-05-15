@@ -1,0 +1,27 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.wrapper
+{
+  background-color: red;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.top
+{
+  height: calc(100% - 70px);
+  overflow-y: auto;
+}
+
+.bottom
+{
+  height: 70px;
+  background-color: black;
+}

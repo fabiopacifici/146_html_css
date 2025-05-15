@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
+
+:root
+{
+  --gb-logo-font-family: 'Nerko One', cursive;
+  --gb-body-font-family: 'Montserrat', sans-serif;
+  --gb-body-bg-color: #f6f5f3;
+  --gb-logo-color: #ff9614;
+  --gb-primary-color: #4e3969;
+  --gb-light-color: #b7b4ba;
+  --gb-bg-lighter: white;
+
+
+  --gb-logo-shadow-color: #a69683;
+}
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,
+body
+{
+  background-color: var(--gb-body-bg-color);
+  font-family: var(--gb-body-font-family);
+  font-size: 14px;
+}
+
+img
+{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+/*#region utilities*/
+/* layout */
+.container
+{
+  width: 95%;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+/* components */
+.card
+{
+  background-color: var(--gb-bg-lighter);
+  box-shadow: 0px 0px 10px var(--gb-logo-shadow-color);
+
+
+  .card-body
+  {
+    padding: 1rem;
+
+    ul
+    {
+      list-style: none;
+      line-height: 2rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+
+}
+
+
+
+/*#endregion utilities*/
+
+
+
+
+/* #region header */
+
+#app_header
+{
+  background-color: var(--gb-bg-lighter);
+
+  h1
+  {
+    color: var(--gb-logo-color);
+    font-family: var(--gb-logo-font-family);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.75rem;
+    text-shadow: 1px 0px 0px var(--gb-logo-shadow-color);
+    font-size: 2.5rem;
+
+
+  }
+}
+
+/* #endregion header */
+
+
+
+/* #region Main */
+
+.recipe
+{
+
+  .subtitle
+  {
+    display: inline-block;
+    text-transform: uppercase;
+    color: var(--gb-light-color);
+    padding-top: 1.5rem;
+  }
+
+  .title
+  {
+    color: var(--gb-primary-color);
+    padding-bottom:
+      1.5rem;
+  }
+
+}
+
+
+.socials
+{
+  padding: 1rem 0;
+
+  .container
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icon
+  {
+    background-color: var(--gb-bg-lighter);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 5px var(--gb-logo-shadow-color);
+
+    span
+    {
+      display: none;
+    }
+  }
+
+
+}
+
+
+.banner
+{
+  display: none;
+}
+
+/* #endregion Main */
+
+/* #region Media Queries */
+
+/* Tablet */
+@media screen and (min-width: 768px)
+{
+
+
+  .container
+  {
+    max-width: 720px;
+  }
+
+  #app_header
+  {
+
+    padding: 0rem 1rem;
+
+    h1
+    {
+      text-align: left;
+    }
+
+  }
+
+  .card .card-body
+  {
+    ul
+    {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 5rem;
+      row-gap: 1.5rem;
+    }
+  }
+
+
+  .socials
+  {
+
+    .icon
+    {
+      padding: 0.25rem 2.5rem;
+    }
+
+
+  }
+
+
+
+  .banner
+  {
+    display: block;
+  }
+
+
+  .presentation
+  {
+    padding: 2rem 0;
+
+    img
+    {
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+
+
+
+}
+
+/* Desktop */
+@media screen and (min-width: 992px)
+{
+
+
+  .container
+  {
+    max-width: 920px;
+  }
+
+
+  .card
+  {
+
+    display: flex;
+
+
+    .card__preview
+    {
+      width: 70%;
+    }
+
+
+    .card-body
+    {
+      ul
+      {
+        display: block;
+
+      }
+    }
+  }
+
+
+  .socials
+  {
+
+    .icon
+    {
+      span
+      {
+        display: inline;
+      }
+    }
+
+
+  }
+
+
+
+}
+
+
+/* #endregion Media Queries */
