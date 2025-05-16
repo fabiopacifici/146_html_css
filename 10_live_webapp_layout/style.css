@@ -1,3 +1,41 @@
+.debug *
+{
+  border: 1px dashed pink;
+
+  [class^="col-"]
+  {
+    background-color: black;
+    min-height: 240px;
+  }
+
+
+  .sidebar
+  {
+    .top
+    {
+      .logo
+      {
+        background-color: blue;
+        min-height: 70px;
+      }
+
+      .main_menu
+      {
+        min-height: 150px;
+        background-color: green;
+      }
+
+      .playlist
+      {
+        min-height: 150px;
+        background-color: yellow;
+      }
+    }
+  }
+
+
+}
+
 *
 {
   margin: 0;
@@ -5,23 +43,301 @@
   box-sizing: border-box;
 }
 
+/* #region Utilities */
+
+.container
+{
+
+  width: 90%;
+  margin: auto;
+
+
+}
+
+.row
+{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+[class^="col-"]
+{
+  padding: 1rem;
+}
+
+.col-1
+{
+  width: calc(100% / 12 * 1);
+}
+
+.col-2
+{
+  width: calc(100% / 12 * 2);
+}
+
+.col-3
+{
+  width: calc(100% / 12 * 3);
+}
+
+.col-4
+{
+  width: calc(100% / 12 * 4);
+}
+
+.col-5
+{
+  width: calc(100% / 12 * 5);
+}
+
+.col-6
+{
+  width: 50%;
+}
+
+.col-7
+{
+  width: calc(100% / 12 * 7);
+}
+
+.col-8
+{
+  width: calc(100% / 12 * 8);
+}
+
+.col-9
+{
+  width: calc(100% / 12 * 9);
+}
+
+.col-10
+{
+  width: calc(100% / 12 * 10);
+}
+
+.col-11
+{
+  width: calc(100% / 12 * 11);
+}
+
+.col-12
+{
+  width: 100%;
+}
+
+
+/* #endregion Utilities */
+
+
+/* Main */
+
 
 .wrapper
 {
   background-color: red;
   height: 100vh;
   overflow: hidden;
+
+  &>.top
+  {
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    display: flex;
+
+    .sidebar
+    {
+      width: 50px;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    main
+    {
+      width: calc(100% - 50px);
+      overflow-y: auto;
+    }
+
+
+  }
+
+  &>.bottom
+  {
+    height: 80px;
+    background-color: black;
+  }
 }
 
 
-.top
+
+
+
+/* #region MediaQuery */
+
+/* Small bk */
+@media screen and (min-width: 568px)
 {
-  height: calc(100% - 70px);
-  overflow-y: auto;
+
+  .wrapper
+  {
+    &>.top
+    {
+
+
+      .sidebar
+      {
+        width: 230px;
+      }
+
+      main
+      {
+        width: calc(100% - 230px);
+      }
+
+    }
+  }
 }
 
-.bottom
+
+
+/* Medium bk */
+
+@media screen and (min-width: 768px)
 {
-  height: 70px;
-  background-color: black;
+
+  /* responsive grid classes */
+  .col-md-1
+  {
+    width: calc(100% / 12 * 1);
+  }
+
+  .col-md-2
+  {
+    width: calc(100% / 12 * 2);
+  }
+
+  .col-md-3
+  {
+    width: calc(100% / 12 * 3);
+  }
+
+  .col-md-4
+  {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-md-5
+  {
+    width: calc(100% / 12 * 5);
+  }
+
+  .col-md-6
+  {
+    width: 50%;
+  }
+
+  .col-md-7
+  {
+    width: calc(100% / 12 * 7);
+  }
+
+  .col-md-8
+  {
+    width: calc(100% / 12 * 8);
+  }
+
+  .col-md-9
+  {
+    width: calc(100% / 12 * 9);
+  }
+
+  .col-md-10
+  {
+    width: calc(100% / 12 * 10);
+  }
+
+  .col-md-11
+  {
+    width: calc(100% / 12 * 11);
+  }
+
+  .col-md-12
+  {
+    width: 100%;
+  }
+
+
 }
+
+
+/* Lg bk */
+
+@media screen and (min-width: 992px)
+{
+
+  /* responsive grid classes */
+  .col-lg-1
+  {
+    width: calc(100% / 12 * 1);
+  }
+
+  .col-lg-2
+  {
+    width: calc(100% / 12 * 2);
+  }
+
+  .col-lg-3
+  {
+    width: calc(100% / 12 * 3);
+  }
+
+  .col-lg-4
+  {
+    width: calc(100% / 12 * 4);
+  }
+
+  .col-lg-5
+  {
+    width: calc(100% / 12 * 5);
+  }
+
+  .col-lg-6
+  {
+    width: 50%;
+  }
+
+  .col-lg-7
+  {
+    width: calc(100% / 12 * 7);
+  }
+
+  .col-lg-8
+  {
+    width: calc(100% / 12 * 8);
+  }
+
+  .col-lg-9
+  {
+    width: calc(100% / 12 * 9);
+  }
+
+  .col-lg-10
+  {
+    width: calc(100% / 12 * 10);
+  }
+
+  .col-lg-11
+  {
+    width: calc(100% / 12 * 11);
+  }
+
+  .col-lg-12
+  {
+    width: 100%;
+  }
+
+}
+
+/* #endregion MediaQuery */
