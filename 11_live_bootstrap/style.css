@@ -1,0 +1,12 @@
+/* [class^="container"],
+[class^="col"],
+[class^="row"]
+{
+  border: 1px dashed red;
+} */
+
+
+.bg_primary
+{
+  background-color: #ffff27;
+}
